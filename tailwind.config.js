@@ -39,6 +39,7 @@ module.exports = {
                 'rotation-lines':"url('assets/images/rotation-lines.png')",
                 'about-background':"url('assets/images/about-bg.png')",
                 'astrid-photo':"url('assets/images/astridPhoto.png')",
+                'full-circle':"url('assets/images/full_circle.png')",
             },
             spacing: {
                 // 40: "40px",

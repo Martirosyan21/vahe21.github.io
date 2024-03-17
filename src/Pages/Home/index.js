@@ -1,4 +1,4 @@
-import {AboutComponent, LandingComponent} from "../../Components";
+import {AboutComponent, LandingComponent} from "../../Components/Home";
 import React, {useRef} from "react";
 
 const Home = ()=>{

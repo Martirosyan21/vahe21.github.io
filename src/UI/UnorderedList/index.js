@@ -12,7 +12,7 @@ const styles = {
     imgSize: {width: 244, height: 244},
     textWeight:{fontWeight:'275'},
     containerWidth:{width:1},
-    chunkTextStyles:{ minWidth:450,fontWeight:'275' }
+    chunkTextStyles:{ minWidth:420,fontWeight:'275', }
 }
 
 export default UnorderedList

@@ -1,7 +1,7 @@
 import React, {forwardRef} from 'react'
-import {useUserSource} from "../hooks/useUserSource";
-import NavigationBar from "../Navigation/NavigationBar";
-import RotationLines from '../assets/images/rotation-lines.png'
+import {useUserSource} from "../../hooks/useUserSource";
+import NavigationBar from "../../Navigation/NavigationBar";
+import RotationLines from '../../assets/images/rotation-lines.png'
 
 const LandingComponent = ({scrollToAbout})=>{
     const {onPressLinkedin, onPressEmail, onPressResume}=useUserSource()

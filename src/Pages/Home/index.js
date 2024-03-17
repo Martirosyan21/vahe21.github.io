@@ -8,6 +8,7 @@ const Home = ()=>{
             scrollToAboutRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
     return(
         <>
             <LandingComponent scrollToAbout={scrollToAbout}/>

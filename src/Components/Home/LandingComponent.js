@@ -1,13 +1,12 @@
 import React from 'react'
 import {useUserSource} from "../../hooks/useUserSource";
-import NavigationBar from "../../Navigation/NavigationBar";
 import RotationLines from '../../assets/images/rotation-lines.png'
 
-const LandingComponent = ({scrollToAbout})=>{
+const LandingComponent = ()=>{
     const {userSource}=useUserSource()
     return(
         <div className="w-full h-screen  bg-landing-background bg-cover overflow-hidden bg-no-repeat" >
-            <NavigationBar scrollToAbout={scrollToAbout}/>
+
             <div className="flex justify-center">
                 <div>
                     <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight text-primary pt-10 top-5 relative">

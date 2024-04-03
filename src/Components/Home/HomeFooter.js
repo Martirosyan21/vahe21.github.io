@@ -24,6 +24,7 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
             break;
             case 'Projects':
                 scrollToProjects();
+            break;
             default :
                 return null
 
@@ -39,12 +40,14 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
                  <div className={'flex  flex-row'}>
                      <div>
                         {
-                            footerActions.slice(0,3).map((action)=> <ActionRow key={action.name} actionName={action.name} onClick={onClick} className={'pr-32'} />)
+                            footerActions.slice(0,3).map((action)=>
+                                <ActionRow key={action.name} actionName={action.name} onClick={onClick} className={'pr-32'} />)
                         }
                      </div>
                      <div>
                         {
-                            userSource.map((action)=> <ActionRow key={action.name} actionName={action.name} onClick={action.action} />)
+                            userSource.map((action)=>
+                                <ActionRow key={action.name} actionName={action.name} onClick={action.action} />)
                         }
                     </div>
                  </div>

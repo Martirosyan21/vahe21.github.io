@@ -5,22 +5,22 @@ export const constants ={
 }
 
 export const rightSectionPoints=[
-    'Working closely with cross-functional teams including developers, product managers, and other designers to bring designs to life',
-    'Being able to identify design problems and propose creative solutions that meet both user and business goals.',
-    'Creating design systems from scratch and collaborating with existing systems such as Material-UI (MUI) and Ant Design.',
-    'Proficiency in creating aesthetically pleasing and intuitive graphical user interfaces for digital products and applications.',
-    'Communicating design decisions and rationale to stakeholders, and being open to feedback and iteration.',
+    'Collaborating closely with cross-functional teams to translate designs into functional products.',
+    'Identifying design challenges and offering creative solutions aligned with user and business objectives.',
+    'Establishing design systems from scratch and integrating them with existing frameworks like Material-UI and Ant Design.',
+    'Creating aesthetically pleasing and intuitive graphical user interfaces for digital applications.',
+    'Articulate design decisions, rationales, and recommendations to stakeholders and collaborate effectively with cross-functional teams such as developers, product managers, and other team members throughout the design process.',
     'Understanding and empathizing with users to create designs that address their needs and pain points.'
 ]
 
 export const leftSectionPoints=[
-    'Proficient in design tools like Figma, Adobe XD, Adobe Illustrator, Adobe Photoshop',
-    'Organizing and structuring information to create intuitive navigation and user flows within digital products',
-    'Creating low-fidelity wireframes and interactive prototypes to visualize and iterate on design concepts.',
-    'Applying principles of design such as typography, color theory, and layout to create visually appealing interfaces.',
+    'Proficient in design tools like Figma, Adobe CS (XD, Illustrator, Photoshop)',
+    'Organizing and structuring information to establish intuitive navigation and user flows.',
+    'Developing low-fidelity wireframes and interactive prototypes for iterative design refinement.',
+    'Applying design principles like typography, color theory, and layout for visually appealing interfaces.',
     'Designing interactive elements to enhance user engagement and usability.',
     'Ensuring that designs are accessible to users with disabilities by following accessibility guidelines and best practices.',
-    'Designing interfaces that work seamlessly across different devices and screen sizes.'
+    'Crafting responsive interfaces for consistent performance across various devices and screen sizes.'
 ]
 
 export const octaveTags = ['Live project', 'Product Desigh', 'UX Design', '2024']

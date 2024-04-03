@@ -23,7 +23,7 @@ const AboutComponent = ({}, ref)=>{
                 IT'S NOT JUST ABOUT PIXELS
             </p>
             <div className={'flex  justify-center '} >
-            <div className={'w-96 mr-24 self-end relative top-28'}>
+            <div className={'w-96 mr-24 self-end relative top-1.5'}>
                 <UnorderedList list={leftSectionPoints} className={'list-disc list-inside'} itemClassNem={'pb-8 font-Kanit text-s text-dark'}/>
             </div>
                 <MainText text={`it's about understanding what makes users tick and building designs that speak to their hearts.`} className="w-fit mr-10 self-end max-w-96">

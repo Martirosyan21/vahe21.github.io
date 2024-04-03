@@ -55,7 +55,7 @@ module.exports = {
                 // "4xl": "32px",
             },
             fontSize: {
-                xs: ["12px", " 16px"],
+                xs: '13px',
                 s:['18px'],
                 '3xl':['36px'],
                 '4xl':['53px'],

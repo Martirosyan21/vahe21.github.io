@@ -1,34 +1,17 @@
 import React from "react";
+
+import ProjectPreview from "./ProjectPreview";
+
 import Octave from "../../assets/images/octave.png";
 import August from "../../assets/images/august.png";
-const Projects= ()=>{
-    return(
-        <div>
+import {crioTags, octaveTags} from "../../constants";
 
-            <div className={'flex mt-52 justify-around ml-28 mr-28'}>
-                <div>
-                    <img src={Octave} alt="..." className="h-auto max-w-full "/>
-                </div>
-                <div className={'ml-16'}/>
-                <div>
-                    <img src={Octave} alt="..." className="h-auto max-w-full"/>
-                </div>
-            </div>
-
-            <div className={'flex mt-52 justify-around ml-28 mr-28'}>
-                <div>
-                    <img src={Octave} alt="..." className="h-auto max-w-full "/>
-                </div>
-                <div className={'ml-16'}/>
-                <div>
-                    <img src={Octave} alt="..." className="h-auto max-w-full"/>
-                </div>
-            </div>
-
-
-        </div>
-
-    )
-}
+const Projects= ()=>(
+    <div className={'flex mt-52 justify-center ml-28 mr-28'}>
+        <ProjectPreview project={{title:'Octave' ,image:Octave, tags:octaveTags}}/>
+        <div className={'ml-16'}/>
+        <ProjectPreview project={{title:'Crio' ,image:August, tags:crioTags}}/>
+    </div>
+)
 
 export default Projects

@@ -22,3 +22,6 @@ export const leftSectionPoints=[
     'Ensuring that designs are accessible to users with disabilities by following accessibility guidelines and best practices.',
     'Designing interfaces that work seamlessly across different devices and screen sizes.'
 ]
+
+export const octaveTags = ['Live project', 'Product Desigh', 'UX Design', '2024']
+export const crioTags = ['UI/UX Design', '2023-24']

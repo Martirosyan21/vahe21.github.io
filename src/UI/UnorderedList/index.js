@@ -3,7 +3,7 @@ import React from "react";
 const UnorderedList = ({list, className, itemClassNem})=>{
     return(
         <ul className={className}>
-            {list.map((point)=><li className={itemClassNem} style={styles.chunkTextStyles}>{point}</li>)}
+            {list.map((point)=><li key={point} className={itemClassNem} style={styles.chunkTextStyles}>{point}</li>)}
         </ul>
     )
 }

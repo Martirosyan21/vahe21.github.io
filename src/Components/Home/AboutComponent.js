@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react'
+import React, { useRef} from 'react'
 import MainText from "../../UI/Title/MainText";
 import UnorderedList from "../../UI/UnorderedList";
 
@@ -6,10 +6,17 @@ import AstridPhoto from "../../assets/images/astridPhoto.png";
 import {leftSectionPoints, rightSectionPoints} from "../../constants";
 import RotationLines from "../../assets/images/full_circle.png";
 import Projects from "./Projects";
+import HomeFooter from "./HomeFooter";
 
-const AboutComponent = ({}, ref)=>{
+const AboutComponent = ({scrollToAbout, scrollToLanding})=>{
+    const projectsRef = useRef(null);
+    const scrollToProjects = () => {
+        if (projectsRef.current) {
+            projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return(
-        <div ref={ref} className="w-full relative bg-about-background bg-cover bg-no-repeat pb-36 z-0">
+        <div className="w-full relative bg-about-background bg-cover bg-no-repeat  z-0">
             <div className="absolute" style={styles.rotationImageStyles}>
                 <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
             </div>
@@ -35,7 +42,10 @@ const AboutComponent = ({}, ref)=>{
                     <UnorderedList list={rightSectionPoints} className={'list-disc list-inside pt-20'} itemClassNem={'pb-8 font-Kanit text-s text-dark'}/>
                 </MainText>
             </div>
-            <Projects/>
+            <div ref={projectsRef}>
+                <Projects/>
+            </div>
+            <HomeFooter scrollToProjects={scrollToProjects} scrollToLanding={scrollToLanding} scrollToAbout={scrollToAbout}/>
         </div>
     )
 }
@@ -46,4 +56,4 @@ const styles = {
     rotationImageStyles:{left:'-20%', top:'10%', zIndex:-1}
 }
 
-export default forwardRef(AboutComponent)
+export default AboutComponent

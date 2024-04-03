@@ -1,11 +1,10 @@
-import React, {forwardRef} from 'react'
+import React from 'react'
 import {useUserSource} from "../../hooks/useUserSource";
 import NavigationBar from "../../Navigation/NavigationBar";
 import RotationLines from '../../assets/images/rotation-lines.png'
 
 const LandingComponent = ({scrollToAbout})=>{
-    const {onPressLinkedin, onPressEmail, onPressResume}=useUserSource()
-
+    const {userSource}=useUserSource()
     return(
         <div className="w-full h-screen  bg-landing-background bg-cover overflow-hidden bg-no-repeat" >
             <NavigationBar scrollToAbout={scrollToAbout}/>
@@ -26,15 +25,13 @@ const LandingComponent = ({scrollToAbout})=>{
                 </div>
             </div>
             <div className={'justify-center flex bottom-5 relative right-96'}>
-                <button className={'cursor-pointer text-light font-Kanit text-s pr-6'} style={styles.buttonTextStyles} onClick={onPressEmail} >
-                    EMAIL
-                </button>
-                <button className={'cursor-pointer text-light font-Kanit text-s pr-6'} style={styles.buttonTextStyles} onClick={onPressLinkedin}>
-                    LINKEDIN
-                </button>
-                <button  className={'cursor-pointer text-light font-Kanit text-s pr-6'} style={styles.buttonTextStyles} onClick={onPressResume}>
-                    RESUME
-                </button>
+                {
+                    userSource.map((source)=>(
+                        <button key={source.name} className={'cursor-pointer text-light font-Kanit text-s pr-6'} style={styles.buttonTextStyles} onClick={source.action} >
+                            {source.name}
+                        </button>
+                    ))
+                }
             </div>
             <div className="relative overflow-hidden" style={styles.rotationImageStyles}>
                 <img src={RotationLines} alt="..." className="h-auto max-w-full" />
@@ -63,4 +60,4 @@ const styles = {
     }
 }
 
-export default forwardRef(LandingComponent)
+export default LandingComponent

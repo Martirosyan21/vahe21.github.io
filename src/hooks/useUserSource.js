@@ -12,9 +12,13 @@ export function useUserSource(){
         window.open(`mailto:${constants.EMAIL}`)
     }
 
+    const userSource = [
+        {name:'LINKEDIN', action:onPressLinkedin},
+        {name:'RESUME', action:onPressResume},
+        {name:'EMAIL', action:onPressEmail},
+    ]
+
     return {
-        onPressResume,
-        onPressEmail,
-        onPressLinkedin
+        userSource
     }
 }

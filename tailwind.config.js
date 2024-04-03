@@ -40,6 +40,7 @@ module.exports = {
                 'about-background':"url('assets/images/about-bg.png')",
                 'astrid-photo':"url('assets/images/astridPhoto.png')",
                 'full-circle':"url('assets/images/full_circle.png')",
+                'half-circle':"url('assets/images/halfCircle.png')",
             },
             spacing: {
                 // 40: "40px",

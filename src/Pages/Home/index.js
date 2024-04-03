@@ -1,18 +1,29 @@
-import {AboutComponent, LandingComponent} from "../../Components/Home";
 import React, {useRef} from "react";
+import {AboutComponent, LandingComponent} from "../../Components/Home";
 
 const Home = ()=>{
-    const scrollToAboutRef = useRef(null);
+    const aboutRef = useRef(null);
+    const landingRef = useRef(null);
     const scrollToAbout = () => {
-        if (scrollToAboutRef.current) {
-            scrollToAboutRef.current.scrollIntoView({ behavior: 'smooth' });
+        if (aboutRef.current) {
+            aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToLanding = () => {
+        if (landingRef.current) {
+            landingRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
     return(
         <>
-            <LandingComponent scrollToAbout={scrollToAbout}/>
-            <AboutComponent ref={scrollToAboutRef} />
+            <div ref={landingRef}>
+                <LandingComponent scrollToAbout={scrollToAbout}/>
+            </div>
+            <div ref={aboutRef}>
+                <AboutComponent  scrollToLanding={scrollToLanding} scrollToAbout={scrollToAbout}/>
+            </div>
         </>
     )
 }

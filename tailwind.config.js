@@ -12,17 +12,14 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                sm: "641px",
-                // => @media (min-width: 640px) { ... }
-
-                md: "769px",
+                md: "768px",
                 // => @media (min-width: 768px) { ... }
 
-                lg: "1025px",
-                // => @media (min-width: 1024px) { ... }
+                lg: "1200px",
+                // => @media (min-width: 1200px) { ... }
 
-                xl: "1281px",
-                // => @media (min-width: 1280px) { ... }
+                xl: "1440px",
+                // => @media (min-width: 1440px) { ... }
 
                 "2xl": "1537px",
                 // => @media (min-width: 1536px) { ... }
@@ -38,7 +35,7 @@ module.exports = {
                 'landing-background':"url('assets/images/landing-background-bg.png')",
                 'rotation-lines':"url('assets/images/rotation-lines.png')",
                 'about-background':"url('assets/images/about-bg.png')",
-                'astrid-photo':"url('assets/images/astridPhoto.png')",
+                'astrid-photo':"url('assets/images/AstridPhoto.png')",
                 'full-circle':"url('assets/images/full_circle.png')",
                 'half-circle':"url('assets/images/halfCircle.png')",
             },

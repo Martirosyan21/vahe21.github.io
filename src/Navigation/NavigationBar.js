@@ -1,6 +1,5 @@
 import { Disclosure } from '@headlessui/react'
 import astridIcon from '../assets/images/astridIcon.png'
-import {useCallback} from "react";
 
 const navigation = [
     { name: 'ABOUT', href: '#', current: true },
@@ -9,13 +8,9 @@ const navigation = [
 
 const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selectedButton } ) =>{
 
-    const navBarHandler = useCallback((name)=>{
-        if(name.toLowerCase() === 'about'){
-            scrollToAbout()
-        }else{
-            scrollToProjects()
-        }
-    }, [])
+    const navBarHandler = (name)=>(
+        name.toLowerCase() === 'about'? scrollToAbout(): scrollToProjects()
+    );
 
     return (
         <div className={'bg-transparent fixed top-0 w-full'} >
@@ -42,11 +37,10 @@ const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selected
                                             key={item.name}
                                             href={item.href}
                                             onClick={()=>navBarHandler(item.name)}
-                                            style={
-
-                                                {fontWeight:'200', color:selectedButton === item.name.toLowerCase() ? '#7572fc' : selectedButton === null ? 'white' :'#464646' }
-
-                                            }
+                                            style={{
+                                                fontWeight:'200',
+                                                color:selectedButton === item.name.toLowerCase() ? '#7572fc' : selectedButton === null ? 'white' :'#464646'
+                                            }}
                                             className={'text-light font-Kanit text-s'}
                                             aria-current={item.current ? 'page' : undefined}
                                         >

@@ -3,20 +3,18 @@ import MainText from "../../UI/Title/MainText";
 import UnorderedList from "../../UI/UnorderedList";
 import {leftSectionPoints, rightSectionPoints} from "../../constants";
 
-import AstridPhoto from "../../assets/images/astridPhoto.png";
+import AstridPhoto from "../../assets/images/AstridPhoto.png";
 import RotationLines from "../../assets/images/full_circle.png";
 
 const AboutComponent = ()=>{
     return(
-      <div>
+      <div >
         <div className="absolute" style={styles.rotationImageStyles}>
             <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
         </div>
         <div className="flex justify-center mr-52">
             <MainText text={`I love diving deep into the user's world to create experiences that truly resonate.`} className={'w-fit ml-2 self-end max-w-96'}/>
-            <div className={'bg-astrid-photo bg-no-repeat mt-64'}>
-                <img src={AstridPhoto} alt="..." style={styles.imgSize} />
-            </div>
+                <img src={AstridPhoto} alt="..." style={styles.imgSize} className={'mt-64'}/>
         </div>
         <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight font-extralight	text-primary pt-3">
             IT'S NOT JUST ABOUT PIXELS

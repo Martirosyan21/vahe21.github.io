@@ -2,6 +2,7 @@ import React, {useCallback} from "react";
 
 import halfCircle from '../../assets/images/halfCircle.png'
 import {useUserSource} from "../../hooks/useUserSource";
+import {useMediaDimentionQuery} from "../../hooks/useMediaDimentonQuery";
 
 
 const windowWidth = window.innerWidth
@@ -12,6 +13,8 @@ const footerActions = [
 ]
 const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
     const {userSource} = useUserSource()
+    const {isLg, isMd, isL} = useMediaDimentionQuery();
+
 
     const onClick = useCallback((actionName)=>{
 
@@ -34,7 +37,7 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
     return(
         <div className={'pl-28 pr-28 pb-24'}>
              <div  className={'flex flex-row justify-between'}>
-                <p className={'font-Kanit text-dark text-s pt-4 pb-2'}>
+                <p className={'font-Kanit text-dark text-s pt-4 pb-2'} style={{width:!isL ? 250 :400}}>
                     All rights reserved. © 2024 Astghik Yeghiazaryan
                 </p>
                  <div className={'flex  flex-row'}>

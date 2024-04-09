@@ -11,7 +11,7 @@ const Projects= ({}, projectsRef)=>{
     const {isL}= useMediaDimentionQuery()
 
     return (
-        <div ref={projectsRef} className={'flex mt-52 justify-center items-center l:items-start ml-28 mr-28 pb-36'} style={{flexDirection:!isL ? 'column' : 'row' ,  }}>
+        <div ref={projectsRef} className={'flex pt-52 justify-center items-center l:items-start ml-28 mr-28 pb-36'} style={{flexDirection:!isL ? 'column' : 'row' ,  }}>
             <ProjectPreview project={{title:'Octave' ,image:Octave, tags:octaveTags}}/>
             <div className={'ml-16 md:pb-12'}/>
             <ProjectPreview project={{title:'Crio' ,image:August, tags:crioTags}}/>

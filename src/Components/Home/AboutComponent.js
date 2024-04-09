@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import MainText from "../../UI/Title/MainText";
 import UnorderedList from "../../UI/UnorderedList";
 import {leftSectionPoints, rightSectionPoints} from "../../constants";
@@ -6,9 +6,9 @@ import {leftSectionPoints, rightSectionPoints} from "../../constants";
 import AstridPhoto from "../../assets/images/AstridPhoto.png";
 import RotationLines from "../../assets/images/full_circle.png";
 
-const AboutComponent = ()=>{
+const AboutComponent = ({},ref)=>{
     return(
-      <div >
+      <div ref={ref} >
         <div className="absolute" style={styles.rotationImageStyles}>
             <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
         </div>
@@ -19,7 +19,7 @@ const AboutComponent = ()=>{
         <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight font-extralight	text-primary pt-3">
             IT'S NOT JUST ABOUT PIXELS
         </p>
-        <div className={'  '} >
+        <div>
             <div className={'flex'} style={{width:'100%',}}>
                 <div className={'flex-1 '} />
                 <div style={{width:50}}/>
@@ -54,4 +54,4 @@ const styles = {
     rotationImageStyles:{left:'-20%', top:'10%', zIndex:-1}
 }
 
-export default AboutComponent
+export default forwardRef(AboutComponent)

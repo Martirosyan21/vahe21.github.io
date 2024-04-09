@@ -13,7 +13,7 @@ const footerActions = [
 ]
 const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
     const {userSource} = useUserSource()
-    const {isLg, isMd, isL} = useMediaDimentionQuery();
+    const { isL} = useMediaDimentionQuery();
 
 
     const onClick = useCallback((actionName)=>{

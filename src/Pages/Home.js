@@ -1,10 +1,10 @@
 import React, {useEffect, useRef, useState} from "react";
 
-import Projects from "../../Components/Home/Projects";
-import HomeFooter from "../../Components/Home/HomeFooter";
-import NavigationBar from "../../Navigation/NavigationBar";
-import {useHomeScrolling} from "../../hooks/useHomeScrolling";
-import {AboutComponent, LandingComponent} from "../../Components/Home";
+import Projects from "../Components/Home/Projects";
+import HomeFooter from "../Components/Home/HomeFooter";
+import NavigationBar from "../Navigation/NavigationBar";
+import {useHomeScrolling} from "../hooks/useHomeScrolling";
+import {AboutComponent, LandingComponent} from "../Components/Home";
 
 const Home = ()=>{
     const aboutRef = useRef(null);

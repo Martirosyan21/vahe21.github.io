@@ -9,13 +9,13 @@ export function useUserSource(){
         window.open(constants.RESUME_URL)
     }
     const onPressEmail = ()=>{
-        window.open(`mailto:${constants.EMAIL}`)
+        navigator.clipboard.writeText('astghik.yv@gmail.com').then()
     }
 
     const userSource = [
         {name:'LINKEDIN', action:onPressLinkedin},
         {name:'RESUME', action:onPressResume},
-        {name:'EMAIL', action:onPressEmail},
+        {name:'EMAIL', action:onPressEmail, hoverText:'Copy'},
     ]
 
     return {

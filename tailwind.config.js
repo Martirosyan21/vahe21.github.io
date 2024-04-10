@@ -35,6 +35,7 @@ module.exports = {
                 Kanit_Italic: ["Kanit-ExtraLightItalic"],
             },
             backgroundImage: {
+                'augustBgd':"url('assets/images/augustBg.png')",
                 'landing-background':"url('assets/images/landing-background-bg.png')",
                 'rotation-lines':"url('assets/images/rotation-lines.png')",
                 'about-background':"url('assets/images/about-bg.png')",

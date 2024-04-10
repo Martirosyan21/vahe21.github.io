@@ -18,7 +18,7 @@ const LandingComponent = ({}, ref)=>{
 
     return(
         <div ref={ref} className="relative w-full h-screen bg-landing-background bg-cover overflow-hidden bg-no-repeat">
-            <div className="flex justify-center md:ml-40">
+            <div className="flex justify-center md:ml-20">
                 <div>
                     <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight text-primary pt-10 md:pt-20 top-5 relative">
                         HEY THERE, I AM ASTRID
@@ -26,20 +26,30 @@ const LandingComponent = ({}, ref)=>{
                     <p className="lg:text-4xl md:text-4.5xl text-left font-Agrandir_WideBlackItalic text-primary md:pt-2 right-16 relative md:ml-8 " >
                         UI | UX DESIGNER
                     </p>
-                    <div className={'flex justify-center md:ml-32'}>
-                        <p  className={'relative right-20 text-justify it font-Kanit uppercase text-light text-s'} style={styles.containerStyles}>
-                            ON A MISSION TO CREATE OUTSTANDING USER EXPERIENCES AND SOLVE PROBLEMS THROUGH USER - CENTERED DESIGN, ENSURING A SEAMLESS AND INTUITIVE EXPERIENCE
-                            <div className={'bg-light flex justify-end'} style={styles.divider}/>
+                    <div className={'flex justify-center md:ml-32'} >
+                        <p  className={'relative right-28 text-justify font-Kanit uppercase text-light text-s '} style={{...styles.containerStyles, ...styles.opacity_08}}>
+                            ON A MISSION &nbsp; TO &nbsp;&nbsp;&nbsp;
+                            CREATE OUTSTANDING USER &nbsp;&nbsp;
+                            EXPERIENCES AND SOLVE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            PROBLEMS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            THROUGH USER -
+                            CENTERED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DESIGN,
+                            ENSURING &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A &nbsp;&nbsp;&nbsp;&nbsp;SEAMLESS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND
+                            INTUITIVE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXPERIENCE
+                            <div className={'bg-light flex justify-end'} style={{...styles.divider, ...styles.opacity_08}}/>
                         </p>
                     </div>
                 </div>
             </div>
-            <div className={'justify-center flex bottom-5 relative right-96 md:ml-80'}>
+            <div className={'justify-center flex  relative  md:ml-60'} style={{right:104*4, bottom:22}}>
                 {
                     userSource.map((source)=>(
-                        <button key={source.name} className={'cursor-pointer text-light font-Kanit text-s pr-6'} style={styles.buttonTextStyles} onClick={source.action} >
-                            {source.name}
-                        </button>
+                        <div className="group">
+                            <button key={source.name} className={'cursor-pointer text-light font-Kanit text-s pr-6'} style={{...styles.opacity_08, ...styles.buttonTextStyles}}
+                                    onClick={source.action}  >
+                                {source.name}
+                            </button>
+                        </div>
                     ))
                 }
             </div>
@@ -52,16 +62,20 @@ const LandingComponent = ({}, ref)=>{
 
 const styles = {
     divider:{
-        width:1, borderRadius:1, height:window.innerHeight/2.3, marginTop:10
+        width:1, borderRadius:1, height:window.innerHeight/2.3, marginTop:10,
     },
     containerStyles:{
         maxWidth:340,
         fontWeight:'200',
         fontStyle:'italic',
+
     },
     buttonTextStyles:{
         fontWeight:'200',
         fontStyle:'italic',
+    },
+    opacity_08:{
+        opacity:0.8
     }
 }
 

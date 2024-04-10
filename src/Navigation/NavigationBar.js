@@ -2,7 +2,7 @@ import { Disclosure } from '@headlessui/react'
 import astridIcon from '../assets/images/astridIcon.png'
 
 const navigation = [
-    { name: 'ABOUTt', href: '#', current: true },
+    { name: 'ABOUT', href: '#', current: true },
     { name: 'PROJECTS', href: '#', current: false },
 ]
 

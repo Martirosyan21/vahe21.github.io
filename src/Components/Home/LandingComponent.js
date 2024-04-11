@@ -19,7 +19,7 @@ const LandingComponent = ({}, ref)=>{
 
     return(
         <div ref={ref} className="relative w-full h-screen bg-landing-background bg-cover overflow-hidden bg-no-repeat">
-            <div className="flex justify-center md:ml-20">
+            <div className="flex justify-center " style={{marginLeft:isL ? 80  : 200}}>
                 <div>
                     <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight text-primary pt-10 md:pt-20 top-5 relative">
                         HEY THERE, I AM ASTRID
@@ -42,7 +42,7 @@ const LandingComponent = ({}, ref)=>{
                     </div>
                 </div>
             </div>
-            <div className={'justify-center flex relative md:ml-60'} style={{ right: 104 * 4, bottom: 22 }}>
+            <div className={'justify-center flex relative'} style={{ right:(isL ? 80:60)*4, bottom: 22}}>
                 {userSource.map((source) => {
                     if (source?.hoverText) {
                         return (

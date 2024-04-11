@@ -2,6 +2,7 @@ import React, {forwardRef, useCallback} from 'react'
 import {useUserSource} from "../../hooks/useUserSource";
 import RotationLines from '../../assets/images/rotation-lines.png'
 import {useMediaDimentionQuery} from "../../hooks/useMediaDimentonQuery";
+import {ClipboardWithTooltip} from "../../UI/Buttons/ClipboardWithTooltip";
 
 const LandingComponent = ({}, ref)=>{
     const {isLg, isMd, isL} = useMediaDimentionQuery();
@@ -41,19 +42,25 @@ const LandingComponent = ({}, ref)=>{
                     </div>
                 </div>
             </div>
-            <div className={'justify-center flex  relative  md:ml-60'} style={{right:104*4, bottom:22}}>
-                {
-                    userSource.map((source)=>(
-                        <div className="group">
-                            <button key={source.name} className={'cursor-pointer text-light font-Kanit text-s pr-6'} style={{...styles.opacity_08, ...styles.buttonTextStyles}}
-                                    onClick={source.action}  >
+            <div className={'justify-center flex relative md:ml-60'} style={{ right: 104 * 4, bottom: 22 }}>
+                {userSource.map((source) => {
+                    if (source?.hoverText) {
+                        return (
+                            <ClipboardWithTooltip title={source.name}/>
+                        );
+                    }
+
+                    return (
+                        <div className="group" key={source.name}>
+                            <button className={'cursor-pointer text-light font-Kanit text-s pr-6 hover:text-gray-800 dark:hover:text-gray-400'} style={{ ...styles.opacity_08, ...styles.buttonTextStyles }} onClick={source.action}>
                                 {source.name}
                             </button>
                         </div>
-                    ))
-                }
+                    );
+                })}
             </div>
-            <div className="absolute  flex " style={{  right:rightPosition, bottom:!isMd? '-10%':'-20%'}}>
+
+            <div className="absolute flex" style={{  right:rightPosition, bottom:!isMd? '-10%':'-20%'}}>
                 <img src={RotationLines} alt="..." className="h-auto max-w-full" />
             </div>
         </div>

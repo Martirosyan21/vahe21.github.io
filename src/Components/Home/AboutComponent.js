@@ -4,7 +4,7 @@ import UnorderedList from "../../UI/UnorderedList";
 import {leftSectionPoints, rightSectionPoints} from "../../constants";
 
 import AstridPhoto from "../../assets/images/AstridPhoto.png";
-import RotationLines from "../../assets/images/full_circle.png";
+import RotationLines from "../../assets/images/RotationLines.png";
 
 const AboutComponent = ({},ref)=>{
     return(
@@ -51,7 +51,7 @@ const AboutComponent = ({},ref)=>{
 const styles = {
     containerWidth:{width:1},
     imgSize: {width: 244, height: 244},
-    rotationImageStyles:{left:'-20%', top:'10%', zIndex:-1}
+    rotationImageStyles:{left:0, top:'10%', zIndex:-1}
 }
 
 export default forwardRef(AboutComponent)

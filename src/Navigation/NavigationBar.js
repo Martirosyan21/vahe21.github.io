@@ -56,7 +56,6 @@ const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selected
                 </Disclosure>
             </div>
          </div>
-
     )
 }
 

@@ -30,8 +30,8 @@ module.exports = withMT({
                 // => @media (min-width: 1536px) { ... }
             },
             fontFamily: {
-                Agrandir: ["Agrandir"],
-                Agrandir_GrandLight: ["Agrandir-GrandLight"],
+                Agrandir: ['Agrandir', "sans-serif"],
+                Agrandir_GrandLight: ['Agrandir-GrandLight'],
                 Agrandir_WideBlackItalic: ["Agrandir-WideBlackItalic"],
                 Kanit: ["Kanit"],
                 Kanit_Italic: ["Kanit-ExtraLightItalic"],

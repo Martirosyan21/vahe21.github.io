@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Agrandir-GrandLight";
+  src: url("./assets/fonts/Agrandir-GrandLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Agrandir-WideBlackItalic";
+  src: url("./assets/fonts/Agrandir-WideBlackItalic.otf") format("opentype");
+}
 
 body {
   margin: 0;

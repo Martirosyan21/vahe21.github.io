@@ -28,7 +28,7 @@ const ProjectPreview = ({project})=>(
                             return(
                                 <Link to={item.linkTo}>
                                     <div className={'flex row items-center pr-4'}>
-                                        <MainText text={item?.title} className={'italic pr-1'}/>
+                                        <MainText text={item?.title} className={'pr-1'} style={{fontStyle:'italic'}}/>
                                         <img src={arrowTo} style={{widht: 16, height: 16, marginTop:25}}/>
                                     </div>
                                 </Link>

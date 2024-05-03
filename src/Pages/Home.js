@@ -22,10 +22,9 @@ const Home = ()=>{
         const handleScroll = () => {
             if (aboutRef.current) {
                 const aboutPosition = aboutRef.current.offsetTop;
-                const projectPosition = projectsRef.current.offsetTop;
                 const scrollPosition = window.pageYOffset;
-                const isAboutSelected =scrollPosition > window.innerHeight-32 && scrollPosition <projectPosition+500;
-                const isProjectSelected =scrollPosition > aboutPosition +projectPosition-250;
+                const isAboutSelected = scrollPosition > window.innerHeight + aboutPosition-20;
+                const isProjectSelected =scrollPosition > window.innerHeight-20 && scrollPosition < window.innerHeight+aboutPosition;
                 setSelectedButton(isAboutSelected? 'about':isProjectSelected? 'projects' : null)
             }
         };
@@ -33,7 +32,7 @@ const Home = ()=>{
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [aboutRef, projectsRef]);
+    }, [aboutRef]);
 
     return(
         <div>

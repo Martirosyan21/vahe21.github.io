@@ -1,7 +1,7 @@
 import React from "react";
 
-const MainText = ({text, className, children})=>(
-    <div className={`font-Kanit  text-s font-extralight text-dark pt-5  pr-3 ...${className}`} style={styles.chunkTextStyles} >
+const MainText = ({text, className, children, style})=>(
+    <div className={`font-Kanit  text-s font-extralight text-dark pt-5  pr-3 ...${className}`} style={{...styles.chunkTextStyles, ...style}} >
         {text}
         {children}
     </div>

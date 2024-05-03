@@ -35,7 +35,7 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
 
     return(
         <div className={'w-full pl-28 pr-28'} >
-            <div  className={'flex flex-row justify-center'} >
+            <div  className={'flex flex-row justify-center top-48 relative'} >
                 <p className={'font-Kanit text-dark text-s pt-4 pb-2'} style={{minWidth: isL ? 472 : 300}}>
                     All rights reserved. © 2024 Astghik Yeghiazaryan
                 </p>

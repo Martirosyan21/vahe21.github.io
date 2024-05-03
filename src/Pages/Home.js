@@ -24,7 +24,6 @@ const Home = ()=>{
                 const aboutPosition = aboutRef.current.offsetTop;
                 const projectPosition = projectsRef.current.offsetTop;
                 const scrollPosition = window.pageYOffset;
-                console.log(window.innerHeight);
                 const isAboutSelected =scrollPosition > window.innerHeight-32 && scrollPosition <projectPosition+500;
                 const isProjectSelected =scrollPosition > aboutPosition +projectPosition-250;
                 setSelectedButton(isAboutSelected? 'about':isProjectSelected? 'projects' : null)
@@ -40,8 +39,8 @@ const Home = ()=>{
         <div>
             <LandingComponent ref={landingRef}/>
                 <div className="w-full relative bg-about-background bg-cover bg-no-repeat z-0">
-                    <AboutComponent ref={aboutRef}/>
                     <Projects ref={projectsRef}/>
+                    <AboutComponent ref={aboutRef}/>
                     <HomeFooter scrollToProjects={scrollToProjects} scrollToLanding={scrollToLanding}
                                 scrollToAbout={scrollToAbout}/>
                 </div>

@@ -2,15 +2,22 @@ import React, {forwardRef} from "react";
 
 import ProjectPreview from "./ProjectPreview";
 
-import Octave from "../../assets/images/octave.png";
-import August from "../../assets/images/august.png";
-import {crioTags, octaveTags} from "../../constants";
+import {augustProjectInfo, octaveProjectInfo} from "../../constants";
+import MainText from "../../UI/Title/MainText";
+import prtik from "../../assets/images/prtik.png";
 
 const Projects= ({}, projectsRef)=>(
-    <div ref={projectsRef} className={'grid l:flex  pt-52 justify-center items-center  pb-36'}>
-        <ProjectPreview project={{title:'Octave', image:Octave, tags:octaveTags , linkTo:'/Octave'}}/>
-        <div className={'ml-16 md:pb-12'}/>
-        <ProjectPreview project={{title:'August', image:August, tags:crioTags, linkTo:'/August'}}/>
+    <div ref={projectsRef} className={'grid justify-center items-center  pt-35'}>
+        <div className={'grid l:flex  pt-20 justify-start items-center'}>
+            <img src={prtik} alt="..." className="w-6 h-6 mt-5 mr-2.5" />
+            <MainText text={`Currently designing @ Tidepool Labs`} />
+        </div>
+        <MainText text={`I’m part of a dynamic venture studio company. We partner with founders to build and launch companies from scratch, bringing digital dreams to life.`} className={'pt-4'}/>
+        <MainText text={`Selected work: Dive into some of the projects I've had the pleasure of crafting from 0 to 1.`} className={'pt-6'}/>
+        <div  className={'pt-20'}>
+            <ProjectPreview project={octaveProjectInfo}/>
+            <ProjectPreview project={augustProjectInfo}/>
+        </div>
     </div>
 )
 

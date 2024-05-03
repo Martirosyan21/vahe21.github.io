@@ -1,3 +1,6 @@
+import Octave from "../assets/images/octave.png";
+import August from "../assets/images/august.png";
+
 export const constants ={
     EMAIL:'asthgik.yv@gmail.com',
     LINKEDIN_URL:'https://www.linkedin.com/in/astghik-yeghiazaryan-732ba919b/',
@@ -24,4 +27,26 @@ export const leftSectionPoints=[
 ]
 
 export const octaveTags = ['Live project', 'Product Desigh', 'UX Design', '2024']
-export const crioTags = ['UI/UX Design', '2023-24']
+export const crioTags = ['Ongoing', 'UI/UX Design', '2023-24']
+
+
+export const octaveProjectInfo = {
+    title:'Octave',
+    image:Octave,
+    tags:octaveTags ,
+    linkTo:'/Octave',
+    description:'AI-powered platform that helps GTM teams develop messaging, generate content, and engage prospects- all from one collaborative workspace. Octave reimagines how companies define and drive their GTM strategy.',
+    links:[
+        {title:'Read case study', linkTo:'/Octave'},
+        {title:'Visit the website', linkTo:'https://www.octavehq.com/'},
+    ]
+}
+
+export const augustProjectInfo = {
+    title:'August',
+    image:August,
+    tags:crioTags,
+    linkTo:'/August',
+    description:'AI-powered revolutionary app that serves as a personalized AI physician in the prevention of heart attacks and strokes for everyone. Patients benefit from a unique approach that fosters collaboration and support, ensuring a holistic journey towards heart health.',
+    links:[{title:'Read case study', linkTo:'/August'}]
+}

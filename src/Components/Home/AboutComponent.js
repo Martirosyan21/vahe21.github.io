@@ -15,8 +15,8 @@ const AboutComponent = ({},ref)=>{
             <div className="absolute" style={styles.rotationImageStyles}>
                 <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
             </div>
-            <div className="flex justify-center mr-52">
-                <MainText text={`I love diving deep into the user's world to create experiences that truly resonate.`} className={'w-fit self-end pr-4'}/>
+            <div className="flex mr-52">
+                <MainText text={`I love diving deep into the user's world to create experiences that truly resonate.`} className={'w-fit self-end pl-9 pr-4'}/>
                 <img src={AstridPhoto} alt="..." style={styles.imgSize} className={'mt-64'}/>
             </div>
             <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight font-extralight	text-primary pt-3">

@@ -35,7 +35,7 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
     }, [scrollToAbout, scrollToLanding])
 
     return(
-        <div className={'pt-12 pb-12 mx-auto md:pl-4 md:pr-4'} style={contentMaxWidth}>
+        <div className={'pt-12 pb-12 mx-auto l:pl-0 l:pr-0 md:pl-4 md:pr-4'} style={contentMaxWidth}>
             <div  className={'flex justify-between top-48'}  >
                 <div>
                     <img

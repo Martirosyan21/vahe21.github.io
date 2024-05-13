@@ -10,12 +10,12 @@ const ProjectPreview = ({project})=>(
         <img src={project.image} style={{maxWidth: 472, maxHeight: 337}} alt="..." className="h-auto max-w-full"/>
         <div className={'ml-16 pb-12'}/>
         <div className={''} style={{ display:'flex', flexDirection:'column',  justifyContent:'space-between' }}>
-            <div>
+            <div s>
                 <p className={'font-Kanit text-dark text-s pb-2'} style={{fontWeight: '275'}}>{project.title}</p>
                 <div className={'flex-row flex'} >
                     {
-                        project.tags.map((item) => (
-                            <ProjectTag key={item} item={item}/>
+                        project.tags.map((item, index) => (
+                            <ProjectTag key={item.toString()+index} item={item}/>
                         ))
                     }
                 </div>
@@ -26,7 +26,7 @@ const ProjectPreview = ({project})=>(
                     {
                         project?.links?.map((item) => {
                             return(
-                                <Link to={item.linkTo}>
+                                <Link to={item.linkTo} key={item?.title}>
                                     <div className={'flex row items-center pr-4'}>
                                         <MainText text={item?.title} className={'pr-1'} style={{fontStyle:'italic'}}/>
                                         <img src={arrowTo} style={{widht: 16, height: 16, marginTop:25}}/>

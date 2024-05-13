@@ -37,12 +37,12 @@ const Home = ()=>{
     return(
         <div>
             <LandingComponent ref={landingRef}/>
-                <div className="w-full relative bg-about-background bg-cover bg-no-repeat z-0">
-                    <Projects ref={projectsRef}/>
-                    <AboutComponent ref={aboutRef}/>
-                    <HomeFooter scrollToProjects={scrollToProjects} scrollToLanding={scrollToLanding}
-                                scrollToAbout={scrollToAbout}/>
-                </div>
+            <div className="w-full relative bg-about-background z-0 " >
+                <Projects ref={projectsRef}/>
+                <AboutComponent ref={aboutRef}/>
+                <HomeFooter scrollToProjects={scrollToProjects} scrollToLanding={scrollToLanding}
+                            scrollToAbout={scrollToAbout}/>
+            </div>
             <NavigationBar scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects} scrollToLanding={scrollToLanding} selectedButton={selectedButton} />
         </div>
     )

@@ -1,49 +1,61 @@
 import React, {forwardRef} from 'react'
 import MainText from "../../UI/Title/MainText";
 import UnorderedList from "../../UI/UnorderedList";
-import {leftSectionPoints, rightSectionPoints} from "../../constants";
+import {contentMaxWidth, leftSectionPoints, rightSectionPoints, topSkillsTags} from "../../constants";
 
+import {ProjectTag} from "../../UI/Tag";
+import prtik from "../../assets/images/prtik.png";
 import AstridPhoto from "../../assets/images/AstridPhoto.png";
 import RotationLines from "../../assets/images/RotationLines.png";
 
 const AboutComponent = ({},ref)=>{
     return(
-      <div ref={ref} >
-        <div className="absolute" style={styles.rotationImageStyles}>
-            <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
-        </div>
-        <div className="flex justify-center mr-52">
-            <MainText text={`I love diving deep into the user's world to create experiences that truly resonate.`} className={'w-fit ml-2 self-end max-w-96'}/>
-            <img src={AstridPhoto} alt="..." style={styles.imgSize} className={'mt-64'}/>
-        </div>
-        <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight font-extralight	text-primary pt-3">
-            IT'S NOT JUST ABOUT PIXELS
-        </p>
-        <div>
-            <div className={'flex'} style={{width:'100%',}}>
-                <div className={'flex-1 '} />
-                <div style={{width:50}}/>
-                <div className={'flex-1 '} >
-                    <MainText text={`it's about understanding what makes users tick and building designs that speak to their hearts.`} >
-                        <div className={'bg-dark h-60 mt-5 ml-0.5'} style={styles.containerWidth}/>
-                        <MainText text={`My journey into the UI/UX realm is all about bringing tech and user needs together, but not just through visuals. I'm a creative soul at heart, and while I began as a graphic designer, I quickly realized that it wasn't enough. That's when I fell head over heels for user research and UX design.`} className={'pt-6'}/>
-                        <MainText text={`With 3 years of experience I'm currently part of a dynamic venture studio company, partnering with startups and established businesses to bring their digital dreams to life. In my role, I take charge of several critical responsibilities. This includes crafting design proposals that outline innovative solutions and design systems to ensure consistency and efficiency in our projects. I'm all about teamwork, collaborating seamlessly with developers, product managers, and our partners to transform ideas into reality`} className={'pt-6'}/>
-                        <MainText text={'My strong suit includes effective time management and ensuring projects stay on track. This multifaceted approach enables me to deliver top-notch UX/UI designs that truly resonate with our users.'} className={'pt-6'}/>
-                        <div className={'bg-dark h-32 mt-5'} style={styles.containerWidth}/>
-                    </MainText>
+      <div ref={ref} className={'pb-36 relative justify-center items-center md:pl-4 md:pr-4'}>
+          <div style={contentMaxWidth} className={'mx-auto'}>
+            <div className="absolute" style={styles.rotationImageStyles}>
+                <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
+            </div>
+            <div className="flex justify-center mr-52">
+                <MainText text={`I love diving deep into the user's world to create experiences that truly resonate.`} className={'w-fit self-end pr-4'}/>
+                <img src={AstridPhoto} alt="..." style={styles.imgSize} className={'mt-64'}/>
+            </div>
+            <p className=" lg:text-4xl md:text-3xl text-center font-Agrandir_GrandLight font-extralight	text-primary pt-3">
+                IT'S NOT JUST ABOUT PIXELS
+            </p>
+            <div>
+                <div className={'flex'} style={{width:'100%',}}>
+                    <div className={'flex-1 '} />
+                    <div className={'flex-1'} >
+                        <MainText text={`it's about understanding what makes users tick and building designs that speak to their hearts.`}>
+                            <div className={'bg-dark h-60 mt-5 ml-0.5'} style={styles.containerWidth}/>
+                            <MainText text={`After five years exploring the design universe, I've spent the past three years immersing myself in UX/UI design. A creative soul at heart, I thrive on crafting seamless digital experiences that delight users. Renowned for my problem-solving prowess, collaborative spirit, and commitment to exceeding expectations, I excel in fast-paced environments and tackle challenges with enthusiasm. I'm constantly seeking to innovate and enhance user interactions. Committed to continuous learning and personal growth, staying updated with the latest industry trends and technologies to enhance my skills and deliver cutting-edge solutions.`} />
+                            <div className={'grid md:flex  pt-0 justify-start items-center'}>
+                                <img src={prtik} alt="..." className="w-6 h-6 mt-5 mr-2.5"/>
+                                <MainText text={'Top skils'} style={{paddingRight: 4}}/>
+                            </div>
+                            <div className={'flex mt-4'} style={{flexWrap:'wrap'}}>
+                                {
+                                    topSkillsTags.map((item, index) => (
+                                        <ProjectTag key={item.toString() + index} item={item}/>
+                                    ))
+                                }
+                            </div>
+                        </MainText>
+                    </div>
+                </div>
+                <div className={'flex'}>
+                    <div className={'mt-20 flex flex-1 ml-4 '}>
+                        <div className={'flex-1'}/>
+                        <UnorderedList list={leftSectionPoints} className={'list-inside'}
+                                       itemClassNem={'pb-8 font-Kanit text-s text-dark '}/>
+                    </div>
+                    <div style={{width:50, paddingLeft:16}}/>
+                    <div className={'flex-1 mr-4  '}  >
+                        <UnorderedList list={rightSectionPoints} className={'list-inside pt-20'} itemClassNem={'pb-8 font-Kanit text-s text-dark'}/>
+                    </div>
                 </div>
             </div>
-            <div className={'flex'} >
-                <div  className={'mt-20 flex flex-1 ml-4 '}>
-                    <div className={'flex-1'}/>
-                    <UnorderedList list={leftSectionPoints} className={'list-disc list-inside'} itemClassNem={'pb-8 font-Kanit text-s text-dark '}/>
-                </div>
-                <div style={{width:50, paddingLeft:16}}/>
-                <div className={'flex-1 mr-4  '}  >
-                    <UnorderedList list={rightSectionPoints} className={'list-disc list-inside pt-20'} itemClassNem={'pb-8 font-Kanit text-s text-dark'}/>
-                </div>
-            </div>
-        </div>
+          </div>
       </div>
     )
 }
@@ -51,7 +63,7 @@ const AboutComponent = ({},ref)=>{
 const styles = {
     containerWidth:{width:1},
     imgSize: {width: 244, height: 244},
-    rotationImageStyles:{left:0, top:'10%', zIndex:-1}
+    rotationImageStyles:{left:0, top:'3%', zIndex:-1}
 }
 
 export default forwardRef(AboutComponent)

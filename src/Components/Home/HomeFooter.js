@@ -1,8 +1,9 @@
 import React, {useCallback} from "react";
 
-import halfCircle from '../../assets/images/halfCircle.png'
 import {useUserSource} from "../../hooks/useUserSource";
 import {useMediaDimentionQuery} from "../../hooks/useMediaDimentonQuery";
+import astridIcon from "../../assets/images/astridIcon.png";
+import {contentMaxWidth} from "../../constants";
 
 
 const footerActions = [
@@ -34,17 +35,24 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
     }, [scrollToAbout, scrollToLanding])
 
     return(
-        <div className={'w-full pl-28 pr-28'} >
-            <div  className={'flex flex-row justify-center top-48 relative'} >
-                <p className={'font-Kanit text-dark text-s pt-4 pb-2'} style={{minWidth: isL ? 472 : 300}}>
-                    All rights reserved. © 2024 Astghik Yeghiazaryan
-                </p>
-                <div className={'ml-16 md:pb-12'}/>
-                <div className={'flex flex-row justify-end'} style={{minWidth:isL ?  472 : 300}}>
+        <div className={'pt-12 pb-12 mx-auto md:pl-4 md:pr-4'} style={contentMaxWidth}>
+            <div  className={'flex justify-between top-48'}  >
+                <div>
+                    <img
+                        className="h-8 w-auto"
+                        src={astridIcon}
+                        alt="Your Company"
+                    />
+                    <p className={'font-Kanit text-dark text-s pt-4 pb-2'} style={{minWidth: isL ? 472 : 300, fontWeight:'275'}}>
+                        All rights reserved. © 2024 Astghik Yeghiazaryan
+                    </p>
+                </div>
+                <div className={'md:pb-12'}/>
+                <div className={'flex '}>
                     <div>
                         {
                             footerActions.slice(0,3).map((action)=>
-                                <ActionRow key={action.name} actionName={action.name} onClick={onClick} className={'pr-32'} />)
+                                <ActionRow key={action.name} actionName={action.name} onClick={onClick} className={'pr-52'} />)
                         }
                     </div>
                     <div >
@@ -55,9 +63,6 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
                     </div>
                 </div>
             </div>
-            <div className={'flex justify-center'}>
-                <img src={halfCircle} alt="..." className="h-auto max-w-full"/>
-            </div>
         </div>
     )
 }
@@ -65,7 +70,7 @@ const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{
 const ActionRow  = ({actionName,onClick, className})=>{
     return(
         <div className={`${className} cursor-pointer`} onClick={()=>onClick(actionName)}>
-            <p className={'font-Kanit normal-case text-dark text-s pt-4 pb-2'}>
+            <p className={'font-Kanit  text-dark text-s pt-4 pb-2'} style={{fontWeight:'275'}}>
                 {actionName.charAt(0).toUpperCase() + actionName.slice(1, actionName.length).toLowerCase()}
             </p>
         </div>

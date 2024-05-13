@@ -18,7 +18,7 @@ const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selected
             <div className={`w-full relative bg-about-background bg-cover ${selectedButton? 'h-16' : 'h-0'}`}>
                 <Disclosure as="nav" className="bg-transparent" >
                     <div className="mx-auto" style={contentMaxWidth} >
-                        <div className=" flex h-16 items-center justify-between md:pr-8 md:pl-8">
+                        <div className=" flex h-16 items-center justify-between l:pr-0 l:pl-0 md:pr-8 md:pl-8">
                             <a onClick={scrollToLanding} className={'cursor-pointer'} >
                                 <img
                                     src={astridIcon}

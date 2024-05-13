@@ -10,7 +10,7 @@ import RotationLines from "../../assets/images/RotationLines.png";
 
 const AboutComponent = ({},ref)=>{
     return(
-      <div ref={ref} className={'pb-36 relative justify-center items-center md:pl-4 md:pr-4'}>
+      <div ref={ref} className={'pb-36 relative justify-center items-center l:pr-0 l:pl-0 md:pl-4 md:pr-4'}>
           <div style={contentMaxWidth} className={'mx-auto'}>
             <div className="absolute" style={styles.rotationImageStyles}>
                 <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
@@ -44,7 +44,7 @@ const AboutComponent = ({},ref)=>{
                     </div>
                 </div>
                 <div className={'flex'}>
-                    <div className={'mt-20 flex flex-1 ml-4 '}>
+                    <div className={'mt-20 flex flex-1'}>
                         <div className={'flex-1'}/>
                         <UnorderedList list={leftSectionPoints} className={'list-inside'}
                                        itemClassNem={'pb-8 font-Kanit text-s text-dark '}/>

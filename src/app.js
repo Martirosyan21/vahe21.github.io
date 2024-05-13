@@ -27,7 +27,6 @@ const RootHistory = ()=>{
 
 export default function App() {
     const {isMd } = useMediaDimentionQuery()
-    console.log('isMd',isMd);
     const notSupported = !isMd;
     return notSupported ? <div style={{width:100, height:100, backgroundColor:'green'}} /> :<RootHistory/>;
 }

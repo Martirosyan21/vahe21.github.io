@@ -1,21 +1,45 @@
 import { Disclosure } from '@headlessui/react'
 import astridIcon from '../assets/images/astridIcon.png'
 import {contentMaxWidth} from "../constants";
+import {useEffect, useState} from "react";
+import landingBg from '../assets/images/landing-background-bg.png'
+import aboutBg from '../assets/images/about-bg.png'
 
 const navigation = [
     { name: 'PROJECTS', href: '#', current: false },
     { name: 'ABOUT', href: '#', current: true },
 ]
-
 const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selectedButton } ) =>{
 
     const navBarHandler = (name)=>(
         name.toLowerCase() === 'about'? scrollToAbout(): scrollToProjects()
     );
+    const [backgroundImage, setBackgroundImage] = useState(selectedButton ? 'bg-about-background' : 'bg-landing-background');
+    const [transitioning, setTransitioning] = useState(false);
+
+    useEffect(() => {
+        setTransitioning(true);
+        const timeout = setTimeout(() => {
+            setBackgroundImage(selectedButton ? 'bg-about-background' : 'bg-landing-background');
+            setTransitioning(false);
+        }, 0); // Duration of the transition
+
+        return () => clearTimeout(timeout);
+    }, [selectedButton]);
+
 
     return (
         <div className={'bg-transparent fixed top-0 w-full'} >
-            <div className={`w-full relative bg-about-background bg-cover ${selectedButton? 'h-16' : 'h-0'}`}>
+            <div
+                className={`w-full relative bg-cover ${backgroundImage}`}
+                style={{
+                    transition: 'background-image 0.2s ease-in-out',
+                    backgroundImage: transitioning
+                        ? selectedButton ? landingBg : aboutBg
+                        : '',
+                }}
+            >
+            {/*<div className={`w-full relative ${!selectedButton ? 'bg-landing-background':'bg-about-background'} bg-cover `} >*/}
                 <Disclosure as="nav" className="bg-transparent" >
                     <div className="mx-auto" style={contentMaxWidth} >
                         <div className=" flex h-16 items-center justify-between l:pr-0 l:pl-0 md:pr-8 md:pl-8">
@@ -52,7 +76,7 @@ const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selected
                     </div>
                 </Disclosure>
             </div>
-         </div>
+        </div>
     )
 }
 

@@ -9,7 +9,7 @@ const UnorderedList = ({list, className, itemClassNem})=>{
 }
 
 const styles = {
-    chunkTextStyles:{ minWidth:370,maxWidth:458, }
+    chunkTextStyles:{ minWidth:370,maxWidth:480 }
 }
 
 export default UnorderedList

@@ -17,6 +17,9 @@ module.exports = withMT({
                 md: "768px",
                 // => @media (min-width: 768px) { ... }
 
+                mdl: "900px",
+                // => @media (min-width: 900px) { ... }
+
                 l: "1080px",
                 // => @media (min-width: 1200px) { ... }
 
@@ -59,10 +62,12 @@ module.exports = withMT({
                 // "4xl": "32px",
             },
             fontSize: {
-                xs: '13px',
+                xxs: '13px',
+                xs:'14px',
                 s:['18px'],
                 l:['20px'],
                 '3xl':['36px'],
+                '3.5xl':['40px'],
                 '4xl':['53px'],
                 "4.5xl": ["40px", "48px"],
             },

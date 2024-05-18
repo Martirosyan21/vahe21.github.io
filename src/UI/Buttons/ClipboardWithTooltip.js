@@ -16,7 +16,7 @@ export function ClipboardWithTooltip({title}) {
                 }}
                 className={'bg-transparent p-0 pr-1.5 pl-1.5 mr-3'}
             >
-                <p className={'cursor-pointer text-light font-Kanit text-s  '} style={{ ...styles.opacity_08, ...styles.buttonTextStyles }}
+                <p className={'cursor-pointer text-light font-Kanit text-s  hover:underline hover:underline-offset-1'} style={{ ...styles.opacity_08, ...styles.buttonTextStyles }}
                         >
                     {title}
                 </p>

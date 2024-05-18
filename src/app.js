@@ -7,6 +7,7 @@ import August from "./Pages/August";
 import Octave from "./Pages/Ovtave";
 import NoPage from "./Pages/NoPage";
 import {useMediaDimentionQuery} from "./hooks/useMediaDimentonQuery";
+import NotSupportedScreen from "./Pages/NotSupportedScreen";
 
 
 const RootHistory = ()=>{
@@ -28,5 +29,5 @@ const RootHistory = ()=>{
 export default function App() {
     const {isMd } = useMediaDimentionQuery()
     const notSupported = !isMd;
-    return notSupported ? <div style={{width:100, height:100, backgroundColor:'green'}} /> :<RootHistory/>;
+    return notSupported ? <NotSupportedScreen /> :<RootHistory/>;
 }

@@ -6,6 +6,7 @@ import {augustProjectInfo, contentMaxWidth, octaveProjectInfo} from "../../const
 import MainText from "../../UI/Title/MainText";
 import prtik from "../../assets/images/prtik.png";
 import {Link} from "react-router-dom";
+import PreviousProjects from "./PreviousProjects";
 
 const Projects = ({}, projectsRef)=>(
     <div ref={projectsRef}>
@@ -21,6 +22,7 @@ const Projects = ({}, projectsRef)=>(
                 <div  className={'pt-20'}>
                     <ProjectPreview project={octaveProjectInfo}/>
                     <ProjectPreview project={augustProjectInfo}/>
+                    <PreviousProjects/>
                 </div>
             </div>
         </div>

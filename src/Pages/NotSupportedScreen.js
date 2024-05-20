@@ -37,6 +37,7 @@ const NotSupportedScreen = () => {
                                     <ClipboardWithTooltip key={source?.name.toString()} title={source.name} fromNonSupported={true}/>
                                 );
                             }
+
                             return (
                                 <div className={"group"} key={source.name}>
                                     <button

@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8c3d4f0b.css",
+    "main.js": "/static/js/main.8b31714d.js",
+    "static/js/453.0dc8a354.chunk.js": "/static/js/453.0dc8a354.chunk.js",
+    "static/media/octaveView.png": "/static/media/octaveView.61734f7b72fcb1bf3ff6.png",
+    "static/media/augustView.png": "/static/media/augustView.be6b92cefa3b2759c0f5.png",
+    "static/media/about-bg.png": "/static/media/about-bg.eb1cdf45db31ab829434.png",
+    "static/media/octave.png": "/static/media/octave.4d77007c5dfb4573f508.png",
+    "static/media/RotationLines.png": "/static/media/RotationLines.a5d7ff10ec1039573cd1.png",
+    "static/media/august.png": "/static/media/august.f365b5121511912a1316.png",
+    "static/media/landing-background-bg.png": "/static/media/landing-background-bg.d4a8523258ee43823809.png",
+    "static/media/rotation-lines.png": "/static/media/rotation-lines.785374fcd35e1f13cfb2.png",
+    "static/media/AstridPhoto.png": "/static/media/AstridPhoto.118d18222098740c4af5.png",
+    "static/media/Agrandir-GrandLight.otf": "/static/media/Agrandir-GrandLight.6dd1904501ff5df803ea.otf",
+    "static/media/Agrandir-WideBlackItalic.otf": "/static/media/Agrandir-WideBlackItalic.99b4c72081e63005f5a1.otf",
+    "index.html": "/index.html",
+    "main.8c3d4f0b.css.map": "/static/css/main.8c3d4f0b.css.map",
+    "main.8b31714d.js.map": "/static/js/main.8b31714d.js.map",
+    "453.0dc8a354.chunk.js.map": "/static/js/453.0dc8a354.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c3d4f0b.css",
+    "static/js/main.8b31714d.js"
+  ]
+}

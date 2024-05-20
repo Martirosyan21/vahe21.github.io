@@ -44,6 +44,7 @@ module.exports = withMT({
                 'landing-background':"url('assets/images/landing-background-bg.png')",
                 'rotation-lines':"url('assets/images/rotation-lines.png')",
                 'about-background':"url('assets/images/about-bg.png')",
+                'octave-background':"url('assets/images/octaveViewBg.png')",
                 'astrid-photo':"url('assets/images/AstridPhoto.png')",
                 'full-circle':"url('assets/images/full_circle.png')",
                 'half-circle':"url('assets/images/halfCircle.png')",

@@ -1,11 +1,25 @@
 import React from 'react'
-import augustBg from '../assets/images/augustView.png'
 import BackButton from "../UI/Buttons/BackButton";
+import augustView1 from '../assets/images/augustView1.png'
+import augustView2 from '../assets/images/augustView2.png'
+import augustView3 from '../assets/images/augustView3.png'
+import augustView4 from '../assets/images/augustView4.png'
+import augustView5 from '../assets/images/augustView5.png'
 
 const August = ()=>(
-    <div style={{backgroundColor:'#181A1E'}} className={'flex justify-center'}>
+    <div>
         <BackButton/>
-        <img src={augustBg} alt="..." className="h-full w-full" style={{maxWidth:1440}} />
+        <div style={{backgroundColor:'#181A1E'}} className={'pr-12 pl-12 pt-24 pb-24'} >
+            <div style={{ justifyContent:'center'}} className={'items-center flex'}>
+                <div style={{maxWidth:1200, justifyContent:'center'}}>
+                    <img src={augustView1} alt="..." className="h-full w-full " style={{paddingBottom:200}} />
+                    <img src={augustView2} alt="..." className="h-full w-full " style={{paddingBottom:200}} />
+                    <img src={augustView3} alt="..." className="h-full w-full " style={{paddingBottom:200}} />
+                    <img src={augustView4} alt="..." className="h-full w-full " style={{paddingBottom:200}} />
+                    <img src={augustView5} alt="..." className="h-full w-full " style={{paddingBottom:200}} />
+                </div>
+            </div>
+        </div>
     </div>
 )
 

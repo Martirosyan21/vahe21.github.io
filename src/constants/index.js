@@ -4,7 +4,7 @@ import August from "../assets/images/august.png";
 export const constants ={
     EMAIL:'asthgik.yv@gmail.com',
     LINKEDIN_URL:'https://www.linkedin.com/in/astghik-yeghiazaryan-732ba919b/',
-    RESUME_URL:'https://drive.google.com/file/d/1nhvESR5PQXJdHf9dpQBefCB-7jCZvo-s/view'
+    RESUME_URL:'https://drive.google.com/file/d/1c7Q_V-odLy1_LjA3B33ElwylIngx8SJN/view?usp=sharing'
 }
 
 export const rightSectionPoints=[

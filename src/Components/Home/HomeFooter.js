@@ -7,8 +7,8 @@ import {contentMaxWidth} from "../../constants";
 
 
 const footerActions = [
-    {name:'Projects', action:''},
     {name:'Home', action:''},
+    {name:'Projects', action:''},
     {name:'About', action:''},
 ]
 const HomeFooter  = ({scrollToAbout,scrollToProjects, scrollToLanding})=>{

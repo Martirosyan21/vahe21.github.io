@@ -1,13 +1,13 @@
 import React, { forwardRef, useState } from 'react';
 import MainText from "../../UI/Title/MainText";
 import UnorderedList from "../../UI/UnorderedList";
-import { contentMaxWidth, leftSectionPoints, rightSectionPoints, topSkillsTags } from "../../constants";
 import { ProjectTag } from "../../UI/Tag";
 import prtik from "../../assets/images/prtik.png";
 import arrowDown from "../../assets/images/arrowDown.png";
 import AstridPhoto from "../../assets/images/AstridPhoto.png";
 import RotationLines from "../../assets/images/RotationLines.png";
 import { useMediaDimentionQuery } from "../../hooks/useMediaDimentonQuery";
+import { contentMaxWidth, leftSectionPoints, rightSectionPoints, topSkillsTags } from "../../constants";
 
 const AboutComponent = ({}, ref) => {
     const { isL } = useMediaDimentionQuery();
@@ -24,20 +24,20 @@ const AboutComponent = ({}, ref) => {
     return (
         <div ref={ref} className={'pb-36 relative justify-center items-center l:pr-0 l:pl-0 md:pl-4 md:pr-4'}>
             <div className="absolute" style={styles.rotationImageStyles}>
-                <img src={RotationLines} alt="..." style={{ maxWidth: 563, maxHeight: 830 }} />
+                <img src={RotationLines} alt="..." style={{ maxWidth: 453, maxHeight: 720 }} />
             </div>
             <div style={contentMaxWidth} className={'mx-auto'}>
                 <div className={'pl-8 pr-8'}>
                     <div className="flex">
                         <MainText
                             text={`I love diving deep into the user's world to create experiences that truly resonate.`}
-                            className={'self-end l:pr-4 l:pl-0 md:pl-24 l:text-s md:text-xxs l:text-left t'}
+                            className={'self-end l:pr-4 l:pl-0 md:pl-24 l:text-s md:text-xxs l:text-left'}
                             style={{ width: '50%' }}
                         />
                         <img src={AstridPhoto} alt="..." style={isL ? styles.imgSize : styles.smallImgSize} className={'mt-64'} />
                     </div>
                     <div>
-                        <p className="l:text-4xl md:text-3.5xl text-center font-Agrandir_GrandLight font-extralight text-primary pt-3">
+                        <p className="l:text-4xl md:text-3.5xl text-center font-Agrandir_GrandLight font-extralight text-primary pt-4">
                             IT'S NOT JUST ABOUT PIXELS
                         </p>
                     </div>
@@ -47,7 +47,7 @@ const AboutComponent = ({}, ref) => {
                         <div className={'flex-1'}/>
                         <div className={'flex-1'}>
                             <MainText
-                                text={`it's about understanding what makes users tick and building designs that speak to their hearts.`}
+                                text={`it's about understanding what makes users tick and building designs that speak to their hearts.`} style={{paddingTop:0}}
                             >
                                 <div className={'bg-dark h-60 mt-5 ml-0.5'} style={styles.containerWidth}/>
                                 <MainText
@@ -75,7 +75,7 @@ const AboutComponent = ({}, ref) => {
                             </div>
 
                             <div className={'flex'}>
-                                <div className={'mt-20 flex flex-1'}>
+                                <div className={'mt-5 flex flex-1'}>
                                     <div className={'flex-1'}/>
                                     <UnorderedList
                                         list={leftSectionPoints}
@@ -87,7 +87,7 @@ const AboutComponent = ({}, ref) => {
                                 <div className={'flex-1 mr-4'}>
                                     <UnorderedList
                                         list={rightSectionPoints}
-                                        className={'list-inside pt-20'}
+                                        className={'list-inside pt-5'}
                                         itemClassNem={'pb-8 font-Kanit text-s text-dark'}
                                     />
                                 </div>
@@ -99,12 +99,12 @@ const AboutComponent = ({}, ref) => {
                         <div className={'flex-1 flex items-center pt-6'}>
                             <button
                                 onClick={handleShowMoreClick}
-                                className={'font-Kanit italic text-dark text-s pb-1  pt-1'}
+                                className={'font-Kanit italic text-dark text-s pb-1  pt-1 pl-1.5'}
                                 style={{fontWeight: '275'}}
                             >
                                 {!showToggle ? 'Show skills' : 'Hide skills'}
                             </button>
-                            <img src={arrowDown} className={`w-4 h-4 ${!showToggle ? 'rotate-0' : 'rotate-180'}`}/>
+                            <img src={arrowDown} className={`w-4 h-4  ${!showToggle ? 'rotate-0' : 'rotate-180'}`}/>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ const styles = {
     containerWidth: { width: 1 },
     imgSize: { width: 244, height: 244 },
     smallImgSize: { width: 188, height: 188 },
-    rotationImageStyles: { top: '6%', left: 0 },
+    rotationImageStyles: { top: '20%', left: 0 },
 };
 
 export default forwardRef(AboutComponent);

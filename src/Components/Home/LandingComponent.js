@@ -24,7 +24,7 @@ const LandingComponent = ({}, ref)=>{
                 <div className="mx-auto" style={contentMaxWidth}>
                     <div className={'l:ml-8 md:ml-24'} >
                         <p className="text-3xl  l:text-4xl pl-16 font-Agrandir_GrandLight text-primary pt-10 md:pt-20 top-5 relative">
-                            HEY HEY THERE, I AM ASTRID
+                            HEY HEY HEY THERE, I AM ASTRID
                         </p>
                         <p className="text-3xl  l:text-4xl text-left font-Agrandir_WideBlackItalic text-primary md:pt-2  relative">
                             UX | UI DESIGNER

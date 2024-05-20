@@ -2,6 +2,8 @@
   "name": "astrid_portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Vahe21.github.io/vahe21.github.io",
+
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
@@ -11,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "flowbite": "^2.3.0",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
@@ -22,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

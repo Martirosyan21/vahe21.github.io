@@ -25,7 +25,7 @@ const ProjectPreview = ({project})=>(
                 <div className={'flex row pb-1'}>
                     {
                         project?.links?.map((item) => (
-                            <Link to={item?.linkTo}>
+                            <Link to={item?.linkTo} key={item?.title}>
                                 <div className={'flex row items-center pr-4'}>
                                     <MainText text={item?.title} className={'pr-1'} style={{fontStyle: 'italic'}}/>
                                     <img src={arrowTo} style={{widht: 16, height: 16, marginTop: 25}}/>

@@ -13,7 +13,6 @@ import ScrollToTop from "./hooks/ScrollToTOp";
 
 const RootHistory = ()=>{
     return(
-        <>
         <BrowserRouter>
             <ScrollToTop/>
             <Routes>
@@ -23,15 +22,13 @@ const RootHistory = ()=>{
                 <Route path="*" element={<NoPage />} />
             </Routes>
         </BrowserRouter>
-        </>
-
     )
 }
 
 
 
 export default function App() {
-    const {isMd } = useMediaDimentionQuery()
-    const notSupported = !isMd;
+    const {nonSupportedSize } = useMediaDimentionQuery()
+    const notSupported = !nonSupportedSize;
     return notSupported ? <NotSupportedScreen /> :<RootHistory/>;
 }

@@ -35,8 +35,8 @@ export const octaveProjectInfo = {
     linkTo:'/Octave',
     description:'AI-powered platform that helps GTM teams develop messaging, generate content, and engage prospects- all from one collaborative workspace. Octave reimagines how companies define and drive their GTM strategy.',
     links:[
-        {title:'Read case study', linkTo:'/Octave'},
-        {title:'Visit the website', linkTo:'https://www.octavehq.com/'},
+        {title:'Read case study', linkTo:'/Octave' , newTab:false},
+        {title:'Visit the website', linkTo:'https://www.octavehq.com/' , newTab:true},
     ]
 }
 
@@ -50,5 +50,5 @@ export const augustProjectInfo = {
     tags:crioTags,
     linkTo:'/August',
     description:'AI-powered revolutionary app that serves as a personalized AI physician in the prevention of heart attacks and strokes for everyone. Patients benefit from a unique approach that fosters collaboration and support, ensuring a holistic journey towards heart health.',
-    links:[{title:'Read case study', linkTo:'/August'}]
+    links:[{title:'Read case study', linkTo:'/August', newTab:false}]
 }

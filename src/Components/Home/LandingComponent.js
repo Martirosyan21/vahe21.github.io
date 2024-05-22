@@ -6,31 +6,32 @@ import {ClipboardWithTooltip} from "../../UI/Buttons/ClipboardWithTooltip";
 import {contentMaxWidth} from "../../constants";
 
 const LandingComponent = ({}, ref)=>{
-    const {isLg, isMd, isL} = useMediaDimentionQuery();
+    const {isXl, isLg, isMd, isL} = useMediaDimentionQuery();
     const {userSource}=useUserSource()
 
     const calculateRightPosition = useCallback(() => {
-        if (isLg) return '-5%';
+        if(isXl) return '-5%'
+        if (isLg) return '-15%';
         if (isL) return '-30%';
-        if (isMd) return '-40%';
+        if (isMd) return '-50%';
         return '-45%';
-    },[isL, isLg, isMd]);
+    },[isL, isLg,isXl, isMd]);
 
     const rightPosition = calculateRightPosition();
-
+    console.log(window.innerHeight);
     return(
         <div ref={ref} className="relative w-full h-screen bg-landing-background bg-cover overflow-hidden bg-no-repeat">
             <div className="w-full justify-center flex">
                 <div className="mx-auto" style={contentMaxWidth}>
                     <div className={'l:ml-8 md:ml-24'} >
-                        <p className="text-3xl  l:text-4xl pl-16 font-Agrandir_GrandLight text-primary pt-10 md:pt-20 top-5 relative">
+                        <p className="text-4xl   pl-16 font-Agrandir_GrandLight text-primary pt-10 md:pt-20 top-5 relative">
                             HEY THERE, I AM ASTRID
                         </p>
-                        <p className="text-3xl  l:text-4xl text-left font-Agrandir_WideBlackItalic text-primary md:pt-2  relative">
+                        <p className="text-4xl left-1  text-left font-Agrandir_WideBlackItalic text-primary md:pt-2  relative">
                             UX | UI DESIGNER
                         </p>
-                        <div className={'flex relative l:right-0 md:right-32'} >
-                            <div className={' bottom-5 items-end flex'} >
+                        <div className={'flex relative l:right-16 md:right-16'} >
+                            <div className={'relative top-1 items-end flex'} >
                                 {userSource.map((source) => {
                                     if (source?.hoverText) {
                                         return (
@@ -49,7 +50,7 @@ const LandingComponent = ({}, ref)=>{
                                 })}
                             </div>
                             <div>
-                                <div className={'text-justify font-Kanit uppercase text-light text-s '}
+                                <div className={'text-justify font-Kanit uppercase text-light text-s'}
                                      style={{...styles.containerStyles, ...styles.opacity_08}}>
                                     ON A MISSION &nbsp; TO &nbsp;&nbsp;&nbsp;
                                     CREATE OUTSTANDING USER &nbsp;&nbsp;
@@ -60,15 +61,13 @@ const LandingComponent = ({}, ref)=>{
                                     ENSURING &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A &nbsp;&nbsp;&nbsp;&nbsp;SEAMLESS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND
                                     INTUITIVE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXPERIENCE
                                 </div>
-                                <div className={'bg-light   '} style={{...styles.divider, ...styles.opacity_08}}/>
+                                <div className={'bg-light   '} style={{...styles.divider, ...styles.opacity_08 , height: window.innerHeight / (window.innerHeight >960 ? 2.3 : 3)}}/>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="absolute flex" style={{right: rightPosition, bottom: !isMd ? '-10%' : '-20%'}}>
+            <div className="absolute flex" style={{right: rightPosition, bottom: !isMd ? '-10%' : '-30%'}}>
                 <img src={RotationLines} alt="..." className="h-auto max-w-full"/>
             </div>
         </div>

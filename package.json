@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "firebaseDeploy": "firebase deploy"
+    "firebase": "firebase deploy"
   },
   "eslintConfig": {
     "extends": [

@@ -62,7 +62,7 @@ const AboutComponent = ({}, ref) => {
                             <div className={'flex'} style={{width: '100%'}}>
                                 <div className={'flex-1'}/>
                                 <div className={'flex-1'}>
-                                    <div className={'grid md:flex pt-0 justify-start items-center'}>
+                                    <div className={'grid md:flex pt-8 justify-start items-center'}>
                                         <img src={prtik} alt="..." className="w-6 h-6 mt-5 mr-2.5"/>
                                         <MainText text={'Top skils'} style={{paddingRight: 4}}/>
                                     </div>
@@ -75,7 +75,7 @@ const AboutComponent = ({}, ref) => {
                             </div>
 
                             <div className={'flex'}>
-                                <div className={'mt-5 flex flex-1'}>
+                                <div className={'mt-12 flex flex-1'}>
                                     <div className={'flex-1'}/>
                                     <UnorderedList
                                         list={leftSectionPoints}
@@ -87,7 +87,7 @@ const AboutComponent = ({}, ref) => {
                                 <div className={'flex-1 mr-4'}>
                                     <UnorderedList
                                         list={rightSectionPoints}
-                                        className={'list-inside pt-5'}
+                                        className={'list-inside pt-12'}
                                         itemClassNem={'pb-8 font-Kanit text-s text-dark'}
                                     />
                                 </div>

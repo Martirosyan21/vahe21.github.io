@@ -1,8 +1,7 @@
 import React from "react";
 import {ProjectTag} from "../../UI/Tag";
 import MainText from "../../UI/Title/MainText";
-import arrowTo from "../../assets/images/arrowTo.png";
-import {Link} from "react-router-dom";
+import {TextButton} from "../../UI/Buttons/TextButton";
 
 const ProjectPreview = ({project})=>(
 
@@ -25,12 +24,7 @@ const ProjectPreview = ({project})=>(
                 <div className={'flex row pb-1'}>
                     {
                         project?.links?.map((item) => (
-                            <Link to={item?.linkTo} key={item?.title}>
-                                <div className={'flex row items-center pr-4'}>
-                                    <MainText text={item?.title} className={'pr-1'} style={{fontStyle: 'italic'}}/>
-                                    <img src={arrowTo} style={{widht: 16, height: 16, marginTop: 25}}/>
-                                </div>
-                            </Link>
+                            <TextButton key={item?.title} newTab={item?.newTab} link={item?.linkTo} title={item?.title}  />
                         ))
                     }
             </div>

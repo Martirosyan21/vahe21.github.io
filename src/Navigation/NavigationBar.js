@@ -6,8 +6,8 @@ import landingBg from '../assets/images/landing-background-bg.png'
 import aboutBg from '../assets/images/about-bg.png'
 
 const navigation = [
-    { name: 'PROJECTS', href: '#', current: false },
-    { name: 'ABOUT', href: '#', current: true },
+    { name: 'PROJECTS', href: '', current: false },
+    { name: 'ABOUT', href: '', current: true },
 ]
 const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selectedButton } ) =>{
 
@@ -55,9 +55,8 @@ const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selected
                                     <div className="flex space-x-4">
                                         {navigation.map((item
                                         ) => (
-                                            <a
+                                            <button
                                                 key={item.name}
-                                                href={item.href}
                                                 onClick={()=>navBarHandler(item.name)}
                                                 style={{
                                                     fontWeight:'275',
@@ -67,7 +66,7 @@ const NavigationBar = ({scrollToAbout,scrollToLanding,scrollToProjects, selected
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
                                                 {item.name}
-                                            </a>
+                                            </button>
                                         ))}
                                     </div>
                                 </div>

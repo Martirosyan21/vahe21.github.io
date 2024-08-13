@@ -41,7 +41,7 @@ export const leftSectionPoints=[
     'Establishing design systems from scratch and integrating them with existing frameworks like Material-UI and Ant Design.',
 ]
 
-export const octaveTags = ['Live project', 'Product Desigh', 'UX Design', '2024']
+export const octaveTags = ['Live project', 'Product Design', 'UX Design', '2024']
 export const crioTags = ['Ongoing', 'UI/UX Design', '2023-24']
 
 
@@ -52,8 +52,8 @@ export const octaveProjectInfo = {
     linkTo:'/Octave',
     description:'AI-powered platform that helps GTM teams develop messaging, generate content, and engage prospects- all from one collaborative workspace. Octave reimagines how companies define and drive their GTM strategy.',
     links:[
-        {title:'Read case study', linkTo:'/Octave' , newTab:false},
-        {title:'Visit the website', linkTo:'https://www.octavehq.com/' , newTab:true},
+        {title:'Case study', linkTo:'/Octave' , newTab:false},
+        {title:'Website', linkTo:'https://www.octavehq.com/' , newTab:true},
     ]
 }
 
@@ -67,7 +67,7 @@ export const augustProjectInfo = {
     tags:crioTags,
     linkTo:'/August',
     description:'AI-powered revolutionary app that serves as a personalized AI physician in the prevention of heart attacks and strokes for everyone. Patients benefit from a unique approach that fosters collaboration and support, ensuring a holistic journey towards heart health.',
-    links:[{title:'Read case study', linkTo:'/August', newTab:false}]
+    links:[{title:'Case study', linkTo:'/August', newTab:false}]
 }
 
 export const augustImages= [

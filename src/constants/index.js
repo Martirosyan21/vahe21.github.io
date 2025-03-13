@@ -100,7 +100,7 @@ export const augustImages = [
 ];
 
 export const peerTreeImages = [
-  { image: "pt1_o59pmn", paddingBottom: 160 },
+  { image: "pt1_sg61eo", paddingBottom: 160 },
   { image: "pt2_nzvnlb", paddingBottom: 160 },
   { image: "pt3_c3pewa", paddingBottom: 160 },
   { image: "pt4_kspuun", paddingBottom: 160 },
